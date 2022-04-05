@@ -12,6 +12,8 @@ import {
   IonCol,
   IonImg,
   IonActionSheet,
+  IonSlide,
+  IonSlides,
 } from '@ionic/react';
 import { camera, trash, close } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
@@ -28,12 +30,12 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        
+
         {/* Grid to display photos */}
       <IonGrid>
         <IonRow>
           {photos.map((photo, index) => (
-            <IonCol size="6" key={index}>
+            <IonCol size="12" key={index}>
               <IonImg src={photo.webviewPath} />
             </IonCol>
           ))}
